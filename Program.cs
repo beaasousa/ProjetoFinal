@@ -11,6 +11,7 @@ Console.WriteLine("[/] Divisão");
 Console.WriteLine("[^] Exponenciação");
 Console.WriteLine("[~] Radiciação");
 Console.WriteLine("[=] MédiaAritmética");
+Console.WriteLine("[&] Conversões");
 
 Console.Write("\nSelecione a operação desejada: ");
 
@@ -46,12 +47,11 @@ switch (opcaoDesejada)
         Calculadora.CalcularMédiaAritmética();
 
         break;
+    case "&":
+        Calculadora.CacularConversões();
+
+        break;
     default:
         Console.WriteLine("Opção inválida.");
         break;
 }
-    Console.WriteLine("\nPressione uma tecla para continuar...");
-    Console.ReadKey();
-    Console.WriteLine("\nObrigado por utilizar nosso programa.");
-
-    return;

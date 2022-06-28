@@ -155,4 +155,75 @@ public class Calculadora
     Console.WriteLine($"Média: {media:N1} ");
     }
 
+
+    public static void CacularConversões()
+    {
+        Console.Clear();
+        string opcaoDesejada;
+
+        Console.Clear();
+        Console.WriteLine("---CONVERSÃO DE DISTÂNCIA---\n");
+        Console.WriteLine("[A] Metro para Foot");
+        Console.WriteLine("[B] Foot para Metro");
+        Console.WriteLine("\n[0] Voltar");
+
+        Console.Write("\nEscolha uma opção: ");
+        opcaoDesejada = Console.ReadLine()!;
+
+        switch (opcaoDesejada)
+        {
+            case "A":
+                ConversoesVisuais.MetroParaFoot();
+                break;
+
+            case "B":
+                ConversoesVisuais.FootParaMetro();
+                break;
+
+            case "0":
+                return;
+        }
+    }
+ public static string ExibeSair()
+    {
+        Console.Clear();
+        string saida;
+
+        Console.WriteLine("Deseja sair do programa?");
+        Console.WriteLine("Y-Yes || N-No");
+        Console.Write("Escolha uma opção: ");
+        saida = Console.ReadLine()!;
+
+        switch (saida.ToUpper())
+        {
+            case "S":
+
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("\nObrigado por usar meu programa!");
+                Console.ResetColor();
+
+                return saida;
+
+            case "N" or "n":
+                return saida;
+
+                default:
+                return "N";
+        }
+    }
+
+     public static void ExibeMiniintroduçao()
+    {
+        Console.Clear();
+        Console.WriteLine("-- Um pouco sobre mim e o motivo do projeto--\n");
+
+        Console.WriteLine("Me chamo Ana Beatriz, tenho 16 anos e faço curso de Informática na Etec Adolpho Berezin, estou no 1° Módulo do Ensino Técnico.");
+
+        Console.WriteLine("Este projeto foi realizado com a intenção de por em prática o que aprendi nesse módulo do curso\n");
+        Console.WriteLine("Quero parabenizar e agradecer os professores, Ermogenes Palacio e Diego Neri, por serem ótimos profissionas e conseguirem ensinar tantas pessoas, a ponto de motivá-las a seguirem nessa área.");
+
+        Console.WriteLine("Pressione uma tecla para continuar: ");
+        Console.ReadKey();
+    }
+
 }
