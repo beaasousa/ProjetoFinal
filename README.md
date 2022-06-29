@@ -8,9 +8,9 @@ Uma calculadora com 7 operações aritméticas(adição, subtração, multiplica
 
 ## Aparência do programa
 
-![Tela principal](Telaprincipal.PNG)
+![Tela principal](principal.PNG) 
 
-![Exemplo](Exsoma.png)
+![Exemplo](opsoma.png)
 
 ---
  ## 🌠 _Download_
