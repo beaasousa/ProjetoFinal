@@ -10,7 +10,7 @@ Uma calculadora com 7 operações aritméticas(adição, subtração, multiplica
 
 ![Tela principal](principal.PNG) 
 
-![Exemplo da operação soma](opsoma.png)
+![Exemplo da operação soma](soma.png)
 
 ---
  ## 🌠 _Download_
