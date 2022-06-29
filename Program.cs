@@ -1,57 +1,79 @@
 ﻿string opcaoDesejada;
 
-Console.Clear();
-
-Console.WriteLine("--- Calculadora 4 operações ---\n");
-
-Console.WriteLine("[+] Soma");
-Console.WriteLine("[-] Subtração");
-Console.WriteLine("[*] Multiplicação");
-Console.WriteLine("[/] Divisão");
-Console.WriteLine("[^] Exponenciação");
-Console.WriteLine("[~] Radiciação");
-Console.WriteLine("[=] MédiaAritmética");
-Console.WriteLine("[&] Conversões");
-
-Console.Write("\nSelecione a operação desejada: ");
-
-opcaoDesejada = Console.ReadLine()!;
-
-switch (opcaoDesejada)
+do
 {
-    case "+":
-        Calculadora.CalcularSoma();
+    Console.Clear();
 
-        break;
-    case "-":
-        Calculadora.CalcularSubtracao();
-    
-        break;
-    case "*":
-       Calculadora.CalcularMultiplicacao();
+    Console.WriteLine("--- Operações ---\n");
 
-        break;
-    case "/":
-      Calculadora.CalcularDivisao();
+    Console.WriteLine("[+] Soma");
+    Console.WriteLine("[-] Subtração");
+    Console.WriteLine("[*] Multiplicação");
+    Console.WriteLine("[/] Divisão");
+    Console.WriteLine("[^] Exponenciação");
+    Console.WriteLine("[~] Radiciação");
+    Console.WriteLine("[=] MédiaAritmética");
+    Console.WriteLine("[&] Conversões");
+    Console.WriteLine("[0] Sair");
+    Console.WriteLine("[#] Sobre");
 
-        break;
-    case "^":
-        Calculadora.CalcularExponenciação();
+    Console.Write("\nSelecione a operação desejada: ");
 
-        break;
-    case "~":
-        Calculadora.CalcularRadiciação();
-      
-        break;
-    case "=":
-        Calculadora.CalcularMédiaAritmética();
+    opcaoDesejada = Console.ReadLine()!;
 
-        break;
-    case "&":
-        Calculadora.CacularConversões();
+    switch (opcaoDesejada)
+    {
+        case "+":
+            Calculadora.CalcularSoma();
 
-        break;
-    default:
-        Console.WriteLine("Opção inválida.");
-        break;
-}
+            break;
+        case "-":
+            Calculadora.CalcularSubtracao();
+
+            break;
+        case "*":
+            Calculadora.CalcularMultiplicacao();
+
+            break;
+        case "/":
+            Calculadora.CalcularDivisao();
+
+            break;
+        case "^":
+            Calculadora.CalcularExponenciação();
+
+            break;
+        case "~":
+            Calculadora.CalcularRadiciação();
+
+            break;
+        case "=":
+            Calculadora.CalcularMédiaAritmética();
+
+            break;
+        case "&":
+            Calculadora.CacularConversões();
+
+            break;
+        case "0":
+            string confirmou = Calculadora.ExibeSair();
+
+            if (confirmou == "N" || confirmou == "n")
+            {
+                opcaoDesejada = "X";
+            }
+            else
+            {
+                return;
+            }
+            break;
+
+        case "#":
+            Calculadora.ExibeMiniintroduçao();
+            break;
+
+        default:
+            Console.WriteLine("Opção inválida.");
+            break;
+    }
+} while (opcaoDesejada != "0");

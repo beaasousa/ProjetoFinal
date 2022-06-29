@@ -19,7 +19,6 @@ public class Calculadora
         Console.WriteLine("\nPressione uma tecla para continuar...");
         Console.ReadKey();
 
-        return;
     }
 
     public static void CalcularSubtracao()
@@ -41,7 +40,6 @@ public class Calculadora
         Console.WriteLine("\nPressione uma tecla para continuar...");
         Console.ReadKey();
 
-        return;
     }
 
     public static void CalcularMultiplicacao()
@@ -63,7 +61,6 @@ public class Calculadora
         Console.WriteLine("\nPressione uma tecla para continuar...");
         Console.ReadKey();
 
-        return;
     }
 
     public static void CalcularDivisao()
@@ -92,12 +89,10 @@ public class Calculadora
         Console.WriteLine("\nPressione uma tecla para continuar...");
         Console.ReadKey();
 
-        return;
     }
 
     public static void CalcularExponenciação()
      {
-         Console.Clear();
          double Exponenciação, a,b;
 
          Console.WriteLine("---Exponenciação---\n");
@@ -114,10 +109,10 @@ public class Calculadora
 
          Console.Write("Pressione uma tecla para continuar");
          Console.ReadKey();
+
      }
      public static void CalcularRadiciação()
      {
-         Console.Clear();
          double Radiciação, x;
 
          Console.WriteLine("---Radiciação---\n");
@@ -153,6 +148,10 @@ public class Calculadora
     media = (n1 + n2 + n3) /3;
 
     Console.WriteLine($"Média: {media:N1} ");
+
+    Console.WriteLine("Pressione uma tecla para continuar");
+    Console.ReadLine();
+
     }
 
 
@@ -172,15 +171,16 @@ public class Calculadora
 
         switch (opcaoDesejada)
         {
-            case "A":
+            case "A" or "a":
                 ConversoesVisuais.MetroParaFoot();
                 break;
 
-            case "B":
+            case "B" or "b":
                 ConversoesVisuais.FootParaMetro();
                 break;
 
             case "0":
+
                 return;
         }
     }
@@ -196,7 +196,7 @@ public class Calculadora
 
         switch (saida.ToUpper())
         {
-            case "S":
+            case "Y" or "y":
 
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("\nObrigado por usar meu programa!");
